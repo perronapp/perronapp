@@ -32,7 +32,7 @@
 
 <p>
   <strong>Photo:</strong>
-  <%= @dog.photo %>
+  <%= image_tag(@dog.avatar_url) %>
 </p>
 
 <%= link_to 'Edit', edit_dog_path(@dog) %> |
