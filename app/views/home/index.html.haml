@@ -1,13 +1,5 @@
 - if current_user
-  Olvidaste su vacuna o desparacitación
 
-  PerronApp te recuerda cuando le toca
-
-  Cartilla de Vacunación & Desparacitación Online
-
-  Registrate HOY y te la REGALAMOS
-
-  %br
   = link_to 'Registrar nuevo perro', new_dog_path
 - else
   #login-container
@@ -16,13 +8,14 @@
         = email_field_tag 'email', nil, placeholder: 'email'
         %br
         %button Registrarse
-    %p
-      Olvidaste su vacuna o desparacitación
-    %p
-      PerronApp te recuerda cuando le toca
+    .subscription-label
+      %p
+        Olvidaste su vacuna o desparacitación
+      %p
+        PerronApp te recuerda cuando le toca
 
-    %p
-      Cartilla de Vacunación & Desparacitación Online
+      %p
+        Cartilla de Vacunación & Desparacitación Online
 
-    %p
-      Registrate HOY y te la REGALAMOS
+      %p
+        Registrate HOY y te la REGALAMOS

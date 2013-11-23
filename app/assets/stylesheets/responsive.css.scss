@@ -6,3 +6,10 @@
     top: 315px;
   }
 }
+
+
+@media (max-width:1195px) {
+  .subscription-label{
+    display: none;
+  }
+}
