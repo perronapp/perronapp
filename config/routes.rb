@@ -1,5 +1,5 @@
 Perronapp::Application.routes.draw do
-  root to: '/'
+  root to: 'home#index'
 
   devise_for :users
 end
