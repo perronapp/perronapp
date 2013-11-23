@@ -1,4 +1,5 @@
 class DogsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_dog, only: [:show, :edit, :update, :destroy]
 
   # GET /dogs
@@ -24,7 +25,7 @@ class DogsController < ApplicationController
   # POST /dogs
   # POST /dogs.json
   def create
-    @dog = Dog.new(dog_params)
+    @dog = current_user.dogs.create dog_params
 
     respond_to do |format|
       if @dog.save

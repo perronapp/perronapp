@@ -1,0 +1,8 @@
+#main-header
+  .dropdown
+    %a#drop4{"data-toggle" => "dropdown", href: "#", role: "button"}
+      Dropdown
+      %b.caret
+    %ul#menu1.dropdown-menu{"aria-labelledby" => "drop4", role: "menu"}
+      %li{role: "presentation"}
+        = link_to 'Log out', destroy_user_session_path, method: :delete
