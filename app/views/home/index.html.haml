@@ -1,0 +1,4 @@
+- if current_user
+  %h1 Mis Canes
+  - current_user.dogs.each do |dog|
+    = link_to dog.name, dog_path(dog)
