@@ -36,8 +36,9 @@
     <%= f.text_field :color %>
   </div>
   <div class="field">
-    <%= f.label :photo %><br>
-    <%= f.text_field :photo %>
+    <%= image_tag(@dog.avatar_url) if @dog.avatar? %>
+    <%= f.file_field :avatar %>
+    <%= f.hidden_field :avatar_cache %>
   </div>
   <div class="actions">
     <%= f.submit %>

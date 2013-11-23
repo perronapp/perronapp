@@ -1,5 +1,3 @@
-<p id="notice"><%= notice %></p>
-
 <ul id='myTab' class="nav nav-tabs">
   <li class="active"><a href="#detalles" data-toggle="tab">Detalles</a></li>
   <li><a href="#vacunas" data-toggle="tab">Vacunas</a></li>
@@ -40,7 +38,7 @@
 
     <p>
       <strong>Photo:</strong>
-      <%= @dog.photo %>
+      <%= image_tag(@dog.avatar_url) %>
     </p>
 
     <%= link_to 'Edit', edit_dog_path(@dog) %> |
@@ -49,4 +47,3 @@
   <div class="tab-pane fade" id="vacunas">...</div>
   <div class="tab-pane fade" id="comida">...</div>
 </div>
-
