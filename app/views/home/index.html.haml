@@ -2,3 +2,7 @@
   %h1 Mis Canes
   - current_user.dogs.each do |dog|
     = link_to dog.name, dog_path(dog)
+- else
+  = link_to 'Inicia sesión', new_user_session_path
+  o
+  = link_to 'Regístrate', new_user_registration_path
