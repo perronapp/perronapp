@@ -7,8 +7,8 @@
     %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", :name => "viewport"}
     = csrf_meta_tags
   %body
+    = render 'layouts/header' if current_user
     #main-container.container
-      = render 'layouts/header' if current_user
       = yield
     :javascript
       <script>

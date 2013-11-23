@@ -12,3 +12,36 @@ button{
   border: none;
   border-radius: 7px;
 }
+
+.container{
+  text-align: center;
+}
+
+h1, h2, h3{
+  color: #fff;
+}
+
+.btn-orange{
+  border: none;
+  border-radius: 5px;
+  color: #fff !important;
+  background: #F26522;
+  padding: 5px;
+  text-decoration: none !important;
+  &:hover{
+    background: #F26522;
+  }
+}
+
+.btn-green{
+  color: #fff;
+  background: #71BB68;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  text-decoration: none;
+  &:hover{
+    background: #71BB68;
+  }
+}
+
