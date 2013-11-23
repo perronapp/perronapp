@@ -1,0 +1,6 @@
+%h1 Dogs
+
+%ul
+- @dogs.each do |dog|
+  %li
+    = "#{dog.name}, #{dog.edad}, #{dog.race}, #{dog.peso}, #{dog.color}"
