@@ -1,0 +1,16 @@
+#login-container{
+  background: image-url('logo.png') center 10% no-repeat;
+  height: 100%;
+}
+
+.login-form{
+  position: relative;
+  text-align: center;
+  top: 50%;
+  input[type='text'], input[type='password']{
+    border-radius: 3px;
+    border: 0;
+    height: 30px;
+    margin-bottom: 20px;
+  }
+}
