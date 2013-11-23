@@ -1,7 +1,12 @@
 - if current_user
   %h1 Mis Canes
+  %ul#my-dogs
   - current_user.dogs.each do |dog|
-    = link_to dog.name, dog_path(dog)
+    %li
+      = link_to dog.name, dog_path(dog)
+
+  %br
+  = link_to 'Registrar nuevo perro', new_dog_path
 - else
   = link_to 'Inicia sesión', new_user_session_path
   o
