@@ -1,23 +1,28 @@
 - if current_user
-  %h1 Mis Canes
-  %ul#my-dogs
-  - current_user.dogs.each do |dog|
-    %li
-      = link_to dog.name, dog_path(dog)
+  Olvidaste su vacuna o desparacitación
+
+  PerronApp te recuerda cuando le toca
+
+  Cartilla de Vacunación & Desparacitación Online
+
+  Registrate HOY y te la REGALAMOS
 
   %br
   = link_to 'Registrar nuevo perro', new_dog_path
 - else
   #login-container
     .login-form
-      = form_tag user_session_path do
-        = text_field_tag 'user[email]', nil, placeholder: 'email'
+      = form_tag subscribed_users_path do
+        = email_field_tag 'email', nil, placeholder: 'email'
         %br
-        = password_field_tag 'user[password]', nil, placeholder: 'password'
-        %br
-        = check_box_tag 'user[remember_me]'
-        = label_tag 'user[remember_me]', 'Remember me'
-        %br
-        %button Sign in
-        %br
-        = link_to "Forgot your password?", new_password_path('user')
+        %button Registrarse
+    %p
+      Olvidaste su vacuna o desparacitación
+    %p
+      PerronApp te recuerda cuando le toca
+
+    %p
+      Cartilla de Vacunación & Desparacitación Online
+
+    %p
+      Registrate HOY y te la REGALAMOS

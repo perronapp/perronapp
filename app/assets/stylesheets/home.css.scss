@@ -7,10 +7,19 @@
   position: relative;
   text-align: center;
   top: 380px;
-  input[type='text'], input[type='password']{
+  input[type='text'], input[type='password'], input[type='email']{
     border-radius: 3px;
     border: 0;
     height: 30px;
     margin-bottom: 20px;
+  }
+}
+
+#thanks_for_subscribing{
+  text-align: center;
+  p{
+    color: #fff;
+    font-size: 24px;
+    margin-top: 40px;
   }
 }
