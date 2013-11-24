@@ -1,5 +1,5 @@
 body{
-padding: 410px 0 750px;
+padding: 500px 0 750px;
 }
 #login-container{
   background: image-url('logo.png') center 10px no-repeat;
@@ -15,7 +15,7 @@ z-index: 3;
 .login-form{
   position: relative;
   text-align: center;
-  top: 315px;
+  top: 405px;
   input[type='text'], input[type='password'], input[type='email']{
     border-radius: 3px;
     border: 0;
