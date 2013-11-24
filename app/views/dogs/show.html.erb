@@ -1,49 +1,51 @@
-<ul id='myTab' class="nav nav-tabs">
-  <li class="active"><a href="#detalles" data-toggle="tab">Detalles</a></li>
-  <li><a href="#vacunas" data-toggle="tab">Vacunas</a></li>
-  <li><a href="#comida" data-toggle="tab">Comida</a></li>
-</ul>
+<div id='dog-show-wrapper'>
+  <ul id='myTab' class="nav nav-tabs">
+    <li class="active"><a href="#detalles" data-toggle="tab">Detalles</a></li>
+    <li><a href="#vacunas" data-toggle="tab">Vacunas</a></li>
+    <li><a href="#comida" data-toggle="tab">Comida</a></li>
+  </ul>
 
-<div class="tab-content">
-  <div class="tab-pane fade in active" id="detalles">
-    <p>
-      <strong>Name:</strong>
-      <%= @dog.name %>
-    </p>
-
-    <p>
-      <strong>Race:</strong>
-      <%= @dog.race %>
-    </p>
-
-    <p>
-      <strong>Weight:</strong>
-      <%= @dog.weight %>
-    </p>
-
-    <p>
-      <strong>Age:</strong>
-      <%= @dog.age %>
-    </p>
-
-    <p>
-      <strong>Sex:</strong>
-      <%= @dog.sex %>
-    </p>
-
-    <p>
-      <strong>Color:</strong>
-      <%= @dog.color %>
-    </p>
-
-    <p>
+  <div class="tab-content">
+    <div class="tab-pane fade in active" id="detalles">
+      <p>
       <strong>Photo:</strong>
-      <%= image_tag(@dog.avatar_url) %>
-    </p>
+      <%= image_tag(@dog.avatar_url, style: 'max-width: 300px;') %>
+      </p>
+      <p>
+        <strong>Name:</strong>
+        <%= @dog.name %>
+      </p>
 
-    <%= link_to 'Edit', edit_dog_path(@dog) %> |
-    <%= link_to 'Back', dogs_path %>
+      <p>
+        <strong>Race:</strong>
+        <%= @dog.race %>
+      </p>
+
+      <p>
+        <strong>Weight:</strong>
+        <%= @dog.weight %>
+      </p>
+
+      <p>
+        <strong>Age:</strong>
+        <%= @dog.age %>
+      </p>
+
+      <p>
+        <strong>Sex:</strong>
+        <%= @dog.sex %>
+      </p>
+
+      <p>
+        <strong>Color:</strong>
+        <%= @dog.color %>
+      </p>
+
+
+      <%= link_to 'Edit', edit_dog_path(@dog) %> |
+      <%= link_to 'Back', dogs_path %>
+    </div>
+    <div class="tab-pane fade" id="vacunas">...</div>
+    <div class="tab-pane fade" id="comida">...</div>
   </div>
-  <div class="tab-pane fade" id="vacunas">...</div>
-  <div class="tab-pane fade" id="comida">...</div>
 </div>
