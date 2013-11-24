@@ -7,11 +7,13 @@
 <div class="tab-content">
   <div class="tab-pane fade in active" id="detalles">
     <div class='menu-header'>
+      <%= link_to "", root_path, class: 'back-button' %>
       <h1><%= @dog.name %></h2>
+      <%= link_to 'Editar', edit_dog_path(@dog), class: 'btn-green editar' %>
     </div>
 
     <div class="avatar-image">
-      <%= image_tag(@dog.avatar_url) %>
+      <%= image_tag(@dog.avatar_url, size: "200x280") %>
     </div>
 
     <div class="profile-details">
@@ -24,7 +26,7 @@
       </p>
 
       <p>
-        <strong><%= @dog.age %> Años</strong>
+        <strong><%= @dog.dob %></strong>
       </p>
 
       <p>
@@ -35,9 +37,6 @@
         <strong><%= @dog.color %></strong>
       </p>
     </div>
-
-    <%= link_to 'Edit', edit_dog_path(@dog) %> |
-    <%= link_to 'Back', dogs_path %>
   </div>
   <div class="tab-pane fade" id="vacunas">...</div>
   <div class="tab-pane fade" id="comida">...</div>
