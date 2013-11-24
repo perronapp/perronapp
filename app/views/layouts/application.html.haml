@@ -11,6 +11,7 @@
     #top-right-banner.scroll-fade
     #main-container
       = yield
-    = image_tag('hueso.png', id: 'hueso-icon', class: 'bottom-icon scroll-fade')
-    = image_tag('reja.png', id: 'reja-icon', class: 'bottom-icon scroll-fade')
-    = image_tag('hydrant.png', id: 'hydrant-icon', class: 'bottom-icon scroll-fade')
+    .container
+      = image_tag('hueso.png', id: 'hueso-icon', class: 'bottom-icon scroll-fade')
+      = image_tag('reja.png', id: 'reja-icon', class: 'bottom-icon scroll-fade')
+      = image_tag('hydrant.png', id: 'hydrant-icon', class: 'bottom-icon scroll-fade')

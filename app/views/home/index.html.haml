@@ -6,32 +6,36 @@
       %button Registrarse
 
 #lista-de-canes
-  .col-md-4
-    = image_tag 'mano.png'
-  .col-md-8
-    %h2
-      Todos los cuidados de tu perro en un solo lugar.
-    %p.section-text
-      Vacunas, alimento, nutrición desparasitación.
+  .container
+    .col-md-4
+      = image_tag 'mano.png'
+    .col-md-8
+      %h2
+        Todos los cuidados de tu perro en un solo lugar.
+      %p.section-text
+        Vacunas, alimento, nutrición desparasitación.
 #perfil
-  .col-md-7
-    %h2
-      Registra a tu perro
-  .col-md-3
-    = image_tag 'cred.png'
+  .container
+    .col-md-5.col-md-offset-2
+      %h2
+        Registra a tu perro
+    .col-md-3
+      = image_tag 'benjamin.png'
 #calendario
-  .col-md-3
-    = image_tag 'calendario.png', style: 'max-height: 400px; right: 260px; top: -40px'
-  .col-md-9
-    %h2
-      Agenda y registra sus eventos y necesidades
-    %p.section-text
-      Despues de darnos los datos nuestro sistema inteligente te recuerda los cuidados importantes
+  .container
+    .col-md-3
+      = image_tag 'calendario.png', style: 'max-height: 400px; right: 260px; top: -40px'
+    .col-md-7
+      %h2
+        Agenda y registra sus eventos y necesidades
+      %p.section-text
+        Despues de darnos los datos nuestro sistema inteligente te recuerda los cuidados importantes
 #badge
-  = image_tag 'popup.png', style: 'max-height: 300px; right: 260px; top: -40px'
-  .section-text
-    %h2
-      El hombre ahora mejor amigo del perro
+  .container
+    = image_tag 'popup.png', style: 'max-height: 300px; right: 260px; top: -40px'
+    .section-text
+      %h2
+        El hombre ahora mejor amigo del perro
 
 
 :coffee

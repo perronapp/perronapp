@@ -1,5 +1,5 @@
 body{
-padding: 370px 0 750px;
+padding: 410px 0 750px;
 }
 #login-container{
   background: image-url('logo.png') center 10px no-repeat;
@@ -15,7 +15,7 @@ z-index: 3;
 .login-form{
   position: relative;
   text-align: center;
-  top: 380px;
+  top: 315px;
   input[type='text'], input[type='password'], input[type='email']{
     border-radius: 3px;
     border: 0;
@@ -44,6 +44,9 @@ z-index: 3;
 #bienvenida, #lista-de-canes, #perfil, #calendario, #badge{
   min-height: 250px;
   padding: 40px;
+  h2{
+    margin-top: 60px;
+  }
 }
 
 #bienvenida{
@@ -56,7 +59,7 @@ z-index: 4;
   background: #fff;
   overflow: hidden;
   position: relative;
-z-index: 5;
+  z-index: 5;
 }
 
 #perfil{
@@ -67,26 +70,35 @@ z-index: 5;
   img{
     float: right;
   }
+  h2{
+    color: #fff;
+  }
 }
 
 #calendario{
   position: relative;
   overflow: hidden;
-  background: #FA7727;
+  background: #2498C8;
   z-index: 7;
   img{
     float: left;
   }
+  h2{
+    color: #fff;
+  }
 }
 
 #badge{
-  background: #6AB860;
+  background: #1D7BA2;
   overflow: hidden;
   position: relative;
   text-align: center;
   z-index: 8;
   .section-text{
     display: block;
+  }
+  h2{
+    color: #fff;
   }
 }
 

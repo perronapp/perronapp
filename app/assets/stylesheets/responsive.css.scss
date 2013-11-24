@@ -3,10 +3,10 @@
     background-size: 300px;
   }
   .login-form{
-    top: 315px;
+    top: 275px;
   }
   body{
-    padding-top: 280px;
+    padding-top: 370px;
   }
   #top-right-banner{
     background-size: 160px;
@@ -20,6 +20,12 @@
 @media (max-width:770px) {
   .bottom-icon{
     width: 50px;
+  }
+  #hueso-icon, #reja-icon{
+    display: none;
+  }
+  #hydrant-icon{
+    width: 100px
   }
 }
 
