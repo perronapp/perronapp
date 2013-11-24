@@ -1,8 +1,8 @@
 - if current_user
   #menu-header
-    = link_to "Agregar Perro", new_dog_path, class: 'add-dog-button'
+    = link_to "", new_dog_path, class: 'add-dog-button'
     %h1 Mis Canes
-    %a Editar
+    %span.btn-green Editar
 
   %ul#my-dogs
     - current_user.dogs.each do |dog|
