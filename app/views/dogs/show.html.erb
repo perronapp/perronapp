@@ -6,40 +6,35 @@
 
 <div class="tab-content">
   <div class="tab-pane fade in active" id="detalles">
-    <p>
-      <strong>Name:</strong>
-      <%= @dog.name %>
-    </p>
+    <div class='menu-header'>
+      <h1><%= @dog.name %></h2>
+    </div>
 
-    <p>
-      <strong>Race:</strong>
-      <%= @dog.race %>
-    </p>
-
-    <p>
-      <strong>Weight:</strong>
-      <%= @dog.weight %>
-    </p>
-
-    <p>
-      <strong>Fecha de Nacimiento:</strong>
-      <%= @dog.dob %>
-    </p>
-
-    <p>
-      <strong>Sex:</strong>
-      <%= @dog.sex %>
-    </p>
-
-    <p>
-      <strong>Color:</strong>
-      <%= @dog.color %>
-    </p>
-
-    <p>
-      <strong>Photo:</strong>
+    <div class="avatar-image">
       <%= image_tag(@dog.avatar_url) %>
-    </p>
+    </div>
+
+    <div class="profile-details">
+      <p>
+        <strong><%= @dog.race %></strong>
+      </p>
+
+      <p>
+        <strong><%= @dog.weight %> Kg</strong>
+      </p>
+
+      <p>
+        <strong><%= @dog.age %> Años</strong>
+      </p>
+
+      <p>
+        <strong><%= @dog.sex %></strong>
+      </p>
+
+      <p>
+        <strong><%= @dog.color %></strong>
+      </p>
+    </div>
 
     <%= link_to 'Edit', edit_dog_path(@dog) %> |
     <%= link_to 'Back', dogs_path %>
