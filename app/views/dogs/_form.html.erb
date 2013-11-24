@@ -33,7 +33,7 @@
       <%= f.number_field :weight, placeholder: 'peso' %>
     </div>
     <div class="field">
-      <%= f.number_field :age, placeholder: 'edad' %>
+      <%= select_date Time.now, start_year: (Time.now.year - 100), end_year: Time.now.year  %>
     </div>
     <div class="field">
       <%= f.text_field :sex, placeholder: 'sexo' %>
