@@ -10,7 +10,6 @@
   %body
     #top-right-banner.scroll-fade
     #main-container
-      = render 'layouts/header' if current_user
       = yield
     = image_tag('hueso.png', id: 'hueso-icon', class: 'bottom-icon scroll-fade')
     = image_tag('reja.png', id: 'reja-icon', class: 'bottom-icon scroll-fade')
