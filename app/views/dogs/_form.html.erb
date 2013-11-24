@@ -1,7 +1,6 @@
 <div id='new-dog-wrapper'>
   <%= form_for(@dog) do |f| %>
     <div class="field" id='dog-avatar-wrapper'>
-      <%= image_tag(@dog.avatar_url) if @dog.avatar? %>
       <%= f.file_field :avatar %>
       <%= f.hidden_field :avatar_cache %>
     </div>

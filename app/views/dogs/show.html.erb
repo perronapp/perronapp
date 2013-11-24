@@ -6,43 +6,37 @@
 
 <div class="tab-content">
   <div class="tab-pane fade in active" id="detalles">
-    <p>
-      <strong>Name:</strong>
-      <%= @dog.name %>
-    </p>
+    <div class='menu-header'>
+      <%= link_to "", root_path, class: 'back-button' %>
+      <h1><%= @dog.name %></h2>
+      <%= link_to 'Editar', edit_dog_path(@dog), class: 'btn-green editar' %>
+    </div>
 
-    <p>
-      <strong>Race:</strong>
-      <%= @dog.race %>
-    </p>
+    <div class="avatar-image">
+      <%= image_tag(@dog.avatar_url, size: "200x280") %>
+    </div>
 
-    <p>
-      <strong>Weight:</strong>
-      <%= @dog.weight %>
-    </p>
+    <div class="profile-details">
+      <p>
+        <strong><%= @dog.race %></strong>
+      </p>
 
-    <p>
-      <strong>Fecha de Nacimiento:</strong>
-      <%= @dog.dob %>
-    </p>
+      <p>
+        <strong><%= @dog.weight %> Kg</strong>
+      </p>
 
-    <p>
-      <strong>Sex:</strong>
-      <%= @dog.sex %>
-    </p>
+      <p>
+        <strong><%= @dog.dob %></strong>
+      </p>
 
-    <p>
-      <strong>Color:</strong>
-      <%= @dog.color %>
-    </p>
+      <p>
+        <strong><%= @dog.sex %></strong>
+      </p>
 
-    <p>
-      <strong>Photo:</strong>
-      <%= image_tag(@dog.avatar_url) %>
-    </p>
-
-    <%= link_to 'Edit', edit_dog_path(@dog) %> |
-    <%= link_to 'Back', dogs_path %>
+      <p>
+        <strong><%= @dog.color %></strong>
+      </p>
+    </div>
   </div>
   <div class="tab-pane fade" id="vacunas">...</div>
   <div class="tab-pane fade" id="comida">...</div>
