@@ -1,9 +1,10 @@
-html, body, #main-container{
+body, #main-container{
   height: 100%;
 }
 
 body{
   background: #29abe2 !important;
+  position: relative;
 }
 
 button{
@@ -11,4 +12,8 @@ button{
   background-color: white;
   border: none;
   border-radius: 7px;
+}
+
+h1, h2, h3{
+  font-family: 'Sonsie One', cursive;
 }

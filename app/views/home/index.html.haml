@@ -1,21 +1,41 @@
-- if current_user
+#login-container
+  .login-form
+    = form_tag subscribed_users_path do
+      = email_field_tag 'email', nil, placeholder: 'email', id: 'subscription-email', tabindex: 1
+      %br
+      %button Registrarse
 
-  = link_to 'Registrar nuevo perro', new_dog_path
-- else
-  #login-container
-    .login-form
-      = form_tag subscribed_users_path do
-        = email_field_tag 'email', nil, placeholder: 'email'
-        %br
-        %button Registrarse
-    .subscription-label
-      %p
-        Olvidaste su vacuna o desparacitación
-      %p
-        PerronApp te recuerda cuando le toca
+  = image_tag 'huella.png', style: 'width: 80px; right: 330px; top: -145px;', class: 'huella-der-arriba'
+  = image_tag 'huella.png', style: 'width: 80px; right: 260px; top: -40px', class: 'huella-der-abajo'
+  = image_tag 'huella.png', style: 'width: 80px; right: 302px; top: 5px', class: 'huella-abajo'
+#lista-de-canes
+  .col-md-4
+    = image_tag 'mano.png'
+  .col-md-8
+    %h2
+      Todos los cuidados de tu perro en un solo lugar.
+    %p.section-text
+      Vacunas, alimento, nutrición desparasitación.
+#perfil
+  .col-md-7
+    %h2
+      Registra a tu perro
+  .col-md-3
+    = image_tag 'cred.png'
+#calendario
+  .col-md-3
+    = image_tag 'calendario.png', style: 'max-height: 400px; right: 260px; top: -40px'
+  .col-md-9
+    %h2
+      Agenda y registra sus eventos y necesidades
+    %p.section-text
+      Despues de darnos los datos nuestro sistema inteligente te recuerda los cuidados importantes
+#badge
+  = image_tag 'popup.png', style: 'max-height: 300px; right: 260px; top: -40px'
+  .section-text
+    %h2
+      El hombre ahora mejor amigo del perro
 
-      %p
-        Cartilla de Vacunación & Desparacitación Online
 
-      %p
-        Registrate HOY y te la REGALAMOS
+:coffee
+  $('#subscription-email').focus()

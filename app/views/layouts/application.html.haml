@@ -3,10 +3,15 @@
   %head
     %title Perronapp
     = stylesheet_link_tag    "application", media: "all"
+    %link{href: "http://fonts.googleapis.com/css?family=Sonsie+One", rel: "stylesheet", type: "text/css"}/
     = javascript_include_tag "application"
     %meta{:content => "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no", :name => "viewport"}
     = csrf_meta_tags
   %body
-    #main-container.container
+    #top-right-banner.scroll-fade
+    #main-container
       = render 'layouts/header' if current_user
       = yield
+    = image_tag('hueso.png', id: 'hueso-icon', class: 'bottom-icon scroll-fade')
+    = image_tag('reja.png', id: 'reja-icon', class: 'bottom-icon scroll-fade')
+    = image_tag('hydrant.png', id: 'hydrant-icon', class: 'bottom-icon scroll-fade')

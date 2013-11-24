@@ -1,6 +1,15 @@
+body{
+padding: 370px 0 750px;
+}
 #login-container{
   background: image-url('logo.png') center 10px no-repeat;
   height: 100%;
+z-index: 3;
+    position: fixed;
+    left: 50%; /* align left edge with center of viewport */
+    top: 0;
+    width: 940px;
+    margin-left: -470px; /* move left by half element's width */
 }
 
 .login-form{
@@ -12,6 +21,7 @@
     border: 0;
     height: 30px;
     margin-bottom: 20px;
+    text-align: center;
   }
 }
 
@@ -29,4 +39,159 @@
   p{
     font-size: 17px;
   }
+}
+
+#bienvenida, #lista-de-canes, #perfil, #calendario, #badge{
+  min-height: 250px;
+  padding: 40px;
+}
+
+#bienvenida{
+  position: relative;
+  background: #fff;
+z-index: 4;
+}
+
+#lista-de-canes{
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+z-index: 5;
+}
+
+#perfil{
+  overflow: hidden;
+  position: relative;
+  background: #0E6D95;
+  z-index: 6;
+  img{
+    float: right;
+  }
+}
+
+#calendario{
+  position: relative;
+  overflow: hidden;
+  background: #FA7727;
+  z-index: 7;
+  img{
+    float: left;
+  }
+}
+
+#badge{
+  background: #6AB860;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  z-index: 8;
+  .section-text{
+    display: block;
+  }
+}
+
+.scroll-fade{
+  position: absolute;
+  bottom: 0;
+  opacity: 0;
+  -webkit-transition: opacity 0.8s ease;
+    -moz-transition: opacity 0.8s ease;
+      -ms-transition: opacity 0.8s ease;
+        -o-transition: opacity 0.8s ease;
+          transition: opacity 0.8s ease;
+}
+
+#hydrant-icon{
+  width: 170px;
+}
+#reja-icon{
+  right: 0;
+  width: 360px;
+}
+#hueso-icon{
+  left: 300px;
+  width: 100px;
+}
+.huella{
+  z-index: 40;
+}
+#scene{
+  z-index: 40;
+}
+
+
+.huella-der-arriba{
+  position: absolute;
+  -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+          -o-transform: rotate(45deg);
+              -ms-transform: rotate(45deg);
+                  transform: rotate(45deg);
+}
+.huella-der{
+  position: absolute;
+  -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+          -o-transform: rotate(90deg);
+              -ms-transform: rotate(90deg);
+                  transform: rotate(90deg);
+}
+
+.huella-der-abajo{
+  position: absolute;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  -ms-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+.huella-abajo{
+  position: absolute;
+  -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+          -o-transform: rotate(180deg);
+              -ms-transform: rotate(180deg);
+                  transform: rotate(180deg);
+}
+.huella-izq-abajo{
+  position: absolute;
+  -webkit-transform: rotate(225deg);
+  -moz-transform: rotate(225deg);
+  -o-transform: rotate(225deg);
+  -ms-transform: rotate(225deg);
+  transform: rotate(225deg);
+}
+
+.huella-izq{
+  position: absolute;
+  -webkit-transform: rotate(270deg);
+      -moz-transform: rotate(270deg);
+          -o-transform: rotate(27270deg);
+              -ms-transform: rotate(270deg);
+                  transform: rotate(270deg);
+}
+.huella-izq-arriba{
+  position: absolute;
+  -webkit-transform: rotate(315deg);
+      -moz-transform: rotate(315deg);
+          -o-transform: rotate(315deg);
+              -ms-transform: rotate(315deg);
+                  transform: rotate(315deg);
+}
+
+#top-right-banner{
+  background: image-url('gratis.png');
+  height: 300px;
+  position: fixed;
+  width: 320px;
+  right: 0;
+  top: 0;
+  z-index: 60;
+}
+
+.section-text{
+  font-family: 'Avenir Next';
+  font-weight: 500;
+  font-size: 20px;
+  margin-top: 30px;
 }

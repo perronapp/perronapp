@@ -5,6 +5,22 @@
   .login-form{
     top: 315px;
   }
+  body{
+    padding-top: 280px;
+  }
+  #top-right-banner{
+    background-size: 160px;
+    background-repeat: no-repeat;
+    width: 160px;
+  }
+  .bottom-icon{
+    width: 50px;
+  }
+}
+@media (max-width:770px) {
+  .bottom-icon{
+    width: 50px;
+  }
 }
 
 
