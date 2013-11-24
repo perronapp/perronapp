@@ -68,8 +68,8 @@ Perronapp::Application.configure do
     :address   => "smtp.mandrillapp.com",
     :port      => 587, # ports 587 and 2525 are also supported with STARTTLS
     :enable_starttls_auto => true, # detects and uses STARTTLS
-    :user_name => ENV['mandrill_user_name'],
-    :password  => ENV['mandrill_password'], # SMTP password is any valid API key
+    :user_name => ENV['MANDRILL_USER_NAME'],
+    :password  => ENV['MANDRILL_PASSWORD'], # SMTP password is any valid API key
     :authentication => 'login', # Mandrill supports 'plain' or 'login'
     :domain => 'perronapp.herokuapp.com', # your domain to identify your server when connecting
   }
