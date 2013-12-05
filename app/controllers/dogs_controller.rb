@@ -25,7 +25,7 @@ class DogsController < ApplicationController
   # POST /dogs
   # POST /dogs.json
   def create
-    @dog = current_user.dogs.create dog_params
+    @dog = current_user.dogs.create (dog_params.merge dob)
 
     respond_to do |format|
       if @dog.save
@@ -71,5 +71,9 @@ class DogsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def dog_params
       params.require(:dog).permit(:name, :race, :weight, :age, :sex, :color, :photo, :avatar)
+    end
+
+    def dob
+      { dob: Date.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i) }
     end
 end

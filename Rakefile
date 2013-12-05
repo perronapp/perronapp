@@ -4,3 +4,7 @@
 require File.expand_path('../config/application', __FILE__)
 
 Perronapp::Application.load_tasks
+
+task vaccine_email: :environment do
+  VaccineMailer.vaccine_email.deliver
+end

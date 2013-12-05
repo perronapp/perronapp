@@ -1,0 +1,46 @@
+.profile-details {
+	background-color: #419B75;
+	width: 320px;
+  margin: 30px auto; 
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+
+  p {
+    height: 80px;
+    font-size: 32px;
+    color: #fff;
+    line-height: 80px;
+    margin: 0;
+  }
+
+  p:hover {
+    background-color: darken(#419B75, 10%)
+  }
+}
+
+.back-button {
+  background: url("back-arrow.png") -13px -8px no-repeat;
+  display: inline-block;
+  width: 30px;
+  height: 33px;
+  background-size: 52px 46px;
+  margin-right: 5%;
+  position: relative;
+  top: 4px;
+}
+
+.back-button:hover {
+  background-color: #0E6D95;
+}
+
+.editar {
+  margin-left: 5%;
+}
+
+.avatar-image {
+  height: 280px;
+  width: 200px;
+  margin: 20px auto;
+
+}

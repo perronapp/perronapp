@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131123193218) do
+ActiveRecord::Schema.define(version: 20131124054413) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 20131123193218) do
     t.string   "name"
     t.string   "race"
     t.integer  "weight"
-    t.integer  "age"
     t.string   "sex"
     t.string   "color"
     t.string   "photo"
@@ -28,6 +27,7 @@ ActiveRecord::Schema.define(version: 20131123193218) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.string   "avatar"
+    t.date     "dob"
   end
 
   create_table "users", force: true do |t|
@@ -50,5 +50,13 @@ ActiveRecord::Schema.define(version: 20131123193218) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "vaccines", force: true do |t|
+    t.string   "name"
+    t.integer  "age"
+    t.boolean  "recurring"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
