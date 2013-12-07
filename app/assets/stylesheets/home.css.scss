@@ -50,7 +50,7 @@
 }
 
 .foto-image {
-  background: url("Foto.png") 50% no-repeat;
+  background: image-url("Foto.png") 50% no-repeat;
   background-size: 95px 105px;
   height: 120px;
   width: 100px;
@@ -59,7 +59,7 @@
 }
 
 .arrow-image {
-  background: url("Flecha.png") -22px -6px no-repeat;
+  background: image-url("Flecha.png") -22px -6px no-repeat;
   background-size: 65px 55px;
   width: 25px;
   height: 45px;
@@ -116,7 +116,7 @@
   }
 
   .add-dog-button {
-    background: url("edit_perr.png") -17px -45px no-repeat;
+    background: image-url("edit_perr.png") -17px -45px no-repeat;
     display: inline-block;
     width: 37px;
     height: 34px;
