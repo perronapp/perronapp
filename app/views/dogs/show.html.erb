@@ -8,7 +8,7 @@
   <div class="tab-pane fade in active" id="detalles">
     <div class='menu-header'>
       <%= link_to "", root_path, class: 'back-button' %>
-      <h1><%= @dog.name %></h2>
+      <h1><%= @dog.name %></h1>
       <%= link_to 'Editar', edit_dog_path(@dog), class: 'btn-green editar' %>
     </div>
 
@@ -37,5 +37,19 @@
         <strong><%= @dog.color %></strong>
       </p>
     </div>
+  </div>
+  <div class="tab-pane fade in" id="vacunas">
+    <div class='menu-header'>
+      <%= link_to "", root_path, class: 'back-button' %>
+      <h1>Vacunas de <%= @dog.name %></h1>
+    </div>
+
+  </div>
+  <div class="tab-pane fade in" id="comida">
+    <div class='menu-header'>
+      <%= link_to "", root_path, class: 'back-button' %>
+      <h1>Alimento para <%= @dog.name %></h1>
+    </div>
+
   </div>
 </div>
