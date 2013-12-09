@@ -30,10 +30,6 @@ ActiveRecord::Schema.define(version: 20131124054413) do
     t.date     "dob"
   end
 
-  create_table "subscribed_users", force: true do |t|
-    t.string "email"
-  end
-
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
     t.string   "encrypted_password",     default: "", null: false
@@ -58,6 +54,7 @@ ActiveRecord::Schema.define(version: 20131124054413) do
   create_table "vaccines", force: true do |t|
     t.string   "name"
     t.integer  "age"
+    t.integer  "dog_id"
     t.boolean  "recurring"
     t.datetime "created_at"
     t.datetime "updated_at"

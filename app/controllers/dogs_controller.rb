@@ -11,6 +11,8 @@ class DogsController < ApplicationController
   # GET /dogs/1
   # GET /dogs/1.json
   def show
+    @vaccines = @dog.vaccines
+    @vaccine  = Vaccine.new
   end
 
   # GET /dogs/new

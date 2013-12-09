@@ -3,6 +3,7 @@ class CreateVaccines < ActiveRecord::Migration
     create_table :vaccines do |t|
       t.string :name
       t.integer :age
+      t.belongs_to :dog
       t.boolean :recurring
 
       t.timestamps

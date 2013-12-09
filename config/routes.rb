@@ -1,5 +1,7 @@
 Perronapp::Application.routes.draw do
-  resources :dogs
+  resources :dogs do
+    resources :vaccines
+  end
 
   root to: 'home#index'
 

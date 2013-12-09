@@ -44,6 +44,21 @@
       <h1>Vacunas de <%= @dog.name %></h1>
     </div>
 
+    <div id='new-dog-vaccines'>
+      <%= form_for [@dog, @vaccine], remote: true do |f| %>
+        <%= f.label :name, 'Vacuna' %>
+        <%= f.text_field :name %>
+        <%= f.submit 'Aceptar' %>
+      <%end%>
+      <ul id='dog-vaccines'>
+        <% @vaccines.each do |v| %>
+          <li>
+            <%= v.name %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
   </div>
   <div class="tab-pane fade in" id="comida">
     <div class='menu-header'>
