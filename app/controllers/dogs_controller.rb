@@ -5,7 +5,7 @@ class DogsController < ApplicationController
   # GET /dogs
   # GET /dogs.json
   def index
-    @dogs = Dog.all
+    redirect_to root_path
   end
 
   # GET /dogs/1
