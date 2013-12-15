@@ -5,7 +5,7 @@
     %span.btn-green Editar
 
   %ul#my-dogs
-    - current_user.dogs.each do |dog|
+    - dogs_for_current_user.each do |dog|
       %li
         %span.foto-image
         = link_to dog.name, dog_path(dog)
