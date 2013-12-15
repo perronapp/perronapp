@@ -66,25 +66,17 @@ class DogsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_dog
-      @dog = Dog.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_dog
+    @dog = Dog.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def dog_params
-      params.require(:dog).permit(:name, :race, :weight, :age, :sex, :color, :photo, :avatar)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def dog_params
+    params.require(:dog).permit(:name, :race, :weight, :age, :sex, :color, :photo, :avatar)
+  end
 
-    def dob
-      { dob: Date.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i) }
-    end
-
-    def authorize_user
-      redirect_to root_path unless user_has_dog
-    end
-
-    def user_has_dog
-      current_user.dogs.include? @dog
-    end
+  def dob
+    { dob: Date.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i) }
+  end
 end
