@@ -19,10 +19,12 @@
         = password_field_tag 'user[password]', nil, placeholder: 'password'
         %br
         = check_box_tag 'user[remember_me]'
-        = label_tag 'user[remember_me]', 'Remember me'
+        = label_tag 'user[remember_me]', t('account.remember_me')
         %br
-        %button Sign in
+        %button= t('account.sign_in')
         %br
-        = link_to "Forgot your password?", new_password_path('user')
+        = link_to t('account.sign_up'), new_user_registration_path
+        %br
+        = link_to t('account.forgot_password'), new_password_path('user')
       = link_to user_omniauth_authorize_path(:facebook), class: 'fb-continue-button' do
-        %span Continue
+        %span= t 'account.continue'
