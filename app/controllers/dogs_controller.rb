@@ -1,6 +1,7 @@
 class DogsController < ApplicationController
   before_action :authenticate_user!
   before_action :set_dog, only: [:show, :edit, :update, :destroy]
+  before_action :authorize_user, only: [:show, :edit, :update, :destroy]
 
   # GET /dogs
   # GET /dogs.json
@@ -77,5 +78,13 @@ class DogsController < ApplicationController
 
     def dob
       { dob: Date.new(params[:date][:year].to_i, params[:date][:month].to_i, params[:date][:day].to_i) }
+    end
+
+    def authorize_user
+      redirect_to root_path unless user_has_dog
+    end
+
+    def user_has_dog
+      current_user.dogs.include? @dog
     end
 end
